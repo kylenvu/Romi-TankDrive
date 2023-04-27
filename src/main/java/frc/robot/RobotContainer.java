@@ -42,7 +42,7 @@ public class RobotContainer {
    * edu.wpi.first.wpilibj2.command.button.JoystickButton}.
    */
   private void configureButtonBindings() {
-    m_controller.x().onTrue(m_romiDrivetrain.forward());
+    x_button.onTrue(m_romiDrivetrain.forward());
   }
 
   /**
