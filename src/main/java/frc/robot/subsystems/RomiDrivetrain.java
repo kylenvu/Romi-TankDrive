@@ -67,8 +67,13 @@ public class RomiDrivetrain extends SubsystemBase {
   }
 
   public Command forward() {
-    return this.startEnd(
-      () -> this.arcadeDrive(0.5, 0),   // Runs arcade drive at
+    return this.runOnce(
+      () -> this.arcadeDrive(0.5, 0)
+    );
+  }
+
+  public Command stop() {
+    return this.runOnce(
       () -> this.arcadeDrive(0, 0)
     );
   }
